@@ -4,6 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>bistromathique.h</itemPath>
+      <itemPath>exp.h</itemPath>
+      <itemPath>mbase.h</itemPath>
+      <itemPath>t_list.h</itemPath>
+      <itemPath>vector.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +17,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>bistromathique.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/print.c</itemPath>
+      <itemPath>/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/str_int.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +44,29 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/print.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/str_int.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="bistromathique.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bistromathique.h" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="exp.h" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mbase.h" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="t_list.h" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vector.h" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +89,29 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/print.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/str_int.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="bistromathique.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bistromathique.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exp.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mbase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="t_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vector.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

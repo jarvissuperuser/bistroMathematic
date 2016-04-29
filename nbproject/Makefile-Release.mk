@@ -35,6 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/49113ce5/print.o \
+	${OBJECTDIR}/_ext/49113ce5/str_int.o \
+	${OBJECTDIR}/bistromathique.o \
 	${OBJECTDIR}/main.o
 
 
@@ -61,6 +64,21 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calc: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/calc ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/49113ce5/print.o: /nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/print.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/49113ce5
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/49113ce5/print.o /nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/print.c
+
+${OBJECTDIR}/_ext/49113ce5/str_int.o: /nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/str_int.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/49113ce5
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/49113ce5/str_int.o /nfs/zfs-student-6/users/tmugadza/NetBeansProjects/calc/str_int.c
+
+${OBJECTDIR}/bistromathique.o: bistromathique.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bistromathique.o bistromathique.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}

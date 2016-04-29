@@ -8,64 +8,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct exp
-{
-    int val1;
-    int val2;
-    char op;
-    int res;
-} exp;
-
-typedef struct vector
-{
-	int a;
-	int x;
-	int y;
-	int z;
-} vector;
-
-typedef struct t_list
-{
-    int exps;
-    exp ex;
-    void *nexp;
-} t_list;
-
-typedef struct mbase
-{
-    int base;
-    char *dig;
-    char *rules;
-} mbase;
-
-int	ft_atoi(char *str) {
-	int	cnt;
-	int	value;
-	int pad;
-	int corr;
-
-	value = 0;
-	cnt = 0;
-	corr = -1;
-	if (str[0] == '-')
-	{
-		corr = -1;
-		str++;
-	}
-	while (*(str + cnt) > 0) {
-		cnt++;
-	}
-
-	pad = 0;
-
-	while (pad < cnt){
-		value = (value<<3) + (value<<1) + str[pad] - '0';
-		pad++;
-	}
-
-	return corr * value;
-}
+#include "bistromathique.h"
+#include "exp.h"
+#include "t_list.h"
+#include "mbase.h"
+#include "vector.h"
 
 /** string length of the first argument */
 int	f_sl(char *c)
@@ -157,6 +104,32 @@ exp	getEx(char *av,int *ac)
 	e.res = 0;
 	return e;	
 }
+int		get_str_in_parenthesis(char *str, int *beg, int *end)
+{
+	int	i;
+	int	flag_par;
+
+	i = 0;
+	*beg = 0;
+	*end = 0;
+	flag_par = 0;
+	while (str[i])
+	{
+		if (str[i] == '(')
+		{
+			*beg = i + 1;
+			flag_par = 1;
+		}
+		if (str[i] == ')')
+		{
+			*end = i - 1;
+			break ;
+		}
+		i++;
+	}
+	return (flag_par);
+}
+
 /** find the expression */
 t_list	loadExp(t_list lst, char **argv)
 {
@@ -191,6 +164,7 @@ int	main(int argc, char** argv)
 		initM(&t_new,argv);
 		if (argc > 3)
 			lst = loadExp(lst,argv);
+		eval_expr((char *)&t_new.base,t_new.rules,argv[3]);
 		printf(" ?? %i\n",lst.ex.val1);
 		dstryM(&t_new);
 	}
